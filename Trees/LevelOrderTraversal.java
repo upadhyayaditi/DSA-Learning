@@ -35,6 +35,9 @@ public class LevelOrderTraversal {
 
         // Method to perform level order traversal
         public void levelOrder(Node root){
+            if (root == null) { // Base case: if the root is null, return
+                return;
+            }
             Queue<Node> queue = new LinkedList<>();
             queue.add(root); // Add the root node to the queue
             queue.add(null); // Add a null marker to indicate the end of the current level
